@@ -104,8 +104,29 @@ secure-mtls-login/
 
 ```
 
-⚠️ Security Notes
-🔐 Never expose ca.key — it can sign new client certificates.
-🔄 Use short-lived certs in production.
-🛑 This is for education or internal use — not a full IAM solution.
-🔒 Run only over HTTPS with CERT_REQUIRED.
+### ⚠️ Security Notes
+- Uses mutual TLS (mTLS): both server and client authenticate with certificates.
+- Strong cryptography: RSA 2048, SHA-256.
+- No passwords or sessions — authentication is stateless and secure.
+- Private keys are protected (PKCS#12 encrypted with password).
+
+- 🔐 Never expose ca.key — it can sign new client certificates.
+- 🔄 Use short-lived certs in production.
+- 🛑 This is for education or internal use — not a full IAM solution.
+- 🔒 Run only over HTTPS with CERT_REQUIRED.
+
+### 🧹 Cleanup
+- To reset:
+
+- Delete: ca.*, server.*, client.*, *.p12
+- Remove imported certificates from your browser/system
+
+
+
+<div align="center">
+
+---
+
+Crafted with ❤️ in India by Sukhi
+
+</div>
