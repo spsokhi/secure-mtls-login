@@ -48,7 +48,7 @@ This creates:
 - ca.crt, ca.key — your Certificate Authority
 - client.p12 — import this into your browser
 - client.crt, client.key — for CLI testing
-- 
+  
 ##  Import Certificates into Browser
 - Import the CA Certificate (ca.crt) to Trust the Server:
 - Press Win + R, type certmgr.msc, and hit Enter.
